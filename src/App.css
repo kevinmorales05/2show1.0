@@ -1,0 +1,211 @@
+@import '~antd/dist/antd.css';
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*INICIO RESPONSIVIDAD DEL LAYOUT*/
+
+#components-layout-demo-responsive .logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  background-image: url('./assets/img/bg/musicBG3.png');
+}
+
+.site-layout-sub-header-background {
+  background: #fff;
+  background-image: url('./assets/img/bg/musicBG4.png');
+  background-size: cover;
+  height: 150px;
+
+}
+
+.site-layout-background {
+  background: #fff;
+  height: fit-content;
+}
+
+/*FIN RESPONSIVIDAD DEL LAYOUT*/
+
+@media only screen and (max-width: 850px) {
+  .site-layout-sub-header-background {
+    background: #fff;
+    background-image: url('./assets/img/bg/BGxs1.png');
+    background-size: cover;
+    height: 80px;
+  
+  }
+  .descriptionItem{
+    width: 225px;
+  }
+}
+
+/*estilos del carrusel*/
+.blockC {
+  height: 400px;
+  background-color: black;
+}
+
+.banner1 {
+  background: #fff;
+  background-image: url('./assets/img/bg/concert.png');
+  background-size:cover;
+  height: 300px;
+  margin-top: 50px;
+}
+.banner2 {
+  background: #fff;
+  background-image: url('./assets/img/bg/sports.png');
+  background-size:cover;
+  height: 300px;
+  margin-top: 50px;
+}
+.banner3 {
+  background: #fff;
+  background-image: url('./assets/img/bg/culture.png');
+  background-size:conver;
+  height: 300px;
+  margin-top: 50px;
+}
+.banner4 {
+  background: #fff;
+  background-image: url('./assets/img/bg/teatrum.png');
+  background-size:cover;
+  height: 300px;
+  margin-top: 50px;
+}
+.contentStyle {
+  color: #fff;
+  margin-top: 30px;
+  text-align:center;
+  font-size: 40px;
+};
+
+/*
+bloque lo que 2show tiene para ti, y como funciona 2show
+*/
+.bannerStyle{
+  color: black;
+  margin-top: 10px;
+  text-align:center;
+  background-color: blue;
+  height: 60px;
+}
+.bannerStyle h2 {
+  color: white;
+  font-size: 35px;
+  padding: 10px;
+  margin: 20px;
+  background-color: rgba(108, 20, 27, 1);;
+  background-size: cover;
+}
+.description {
+  display: flex;
+}
+.descriptionItem {
+  align-self: center;
+  align-content: center;
+  margin: 0 auto;
+}
+.description1 h2 {
+  color: rgba(108, 20, 27, 1);
+  font-size: 35px;
+  padding: 10px;
+  margin: 20px;
+  
+}
+.description1 p {
+  color: black;
+  font-size: 15px;
+  padding: 10px;
+  margin: 0 auto;
+  width: 60%;
+  justify-content:center;
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+.btnShows {
+  background-color: rgba(108, 20, 27, 1) ;
+  color: white;
+  border-color: rgba(46, 54, 76, 1);
+}
+.btnShows:hover {
+  background-color: rgba(46, 54, 76, 1)   ;
+  color: white;
+  border-color: rgba(108, 20, 27, 1);
+}
+
+
+/*PROFILE COMPONENT*/
+
+.imgProfile {
+  border-radius: 200px;
+}
+.background {
+ 
+ background-color: #cccccc;
+}
+.info {
+  
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  align-self: center;
+}
+.general{
+  display: block;
+  flex-wrap:wrap;
+}
+
+.button {
+  margin: 10px;
+}
+.contentVariable{
+  height: fit-content;
+  background-color: pink;
+  width: 70%;
+  margin: 0 auto;
+  margin-top:20px;
+  padding-top: 20px;
+  padding-bottom: 20px ;
+  align-content: center;
+}
