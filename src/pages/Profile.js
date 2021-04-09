@@ -1,11 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Divider, Image, Card, Row, Col, Button } from "antd";
 import MyShows from "./MyShows";
-import CreateShow from './CreateShow';
+import CreateShow from "./CreateShow";
+import { auth, db } from "../firebase";
 
+
+import { useHistory } from "react-router-dom";
 
 export default function Profile() {
   const [myshows, setMyshows] = useState(true);
+  const [user, setUser] = useState("");
+ 
+
+  let history = useHistory();
+  const [userInfo, setUserInfo] = useState({});
+
+  //funciones de lectura de informacion de firebase
+
+useEffect(() => {
+  const getData = async () => {
+
+      const userRef = await db.ref(`users/${auth.currentUser.uid}`);
+      userRef.on('value', snapshot => {
+        console.log(snapshot.val())
+        setUserInfo(snapshot.val())
+
+      } );
+
+  }
+  getData()
+}, [])
+
+
 
   return (
     <div className="general">
@@ -16,7 +42,7 @@ export default function Profile() {
           className="imgProfile"
         />
       </div>
-      <Divider>Denisse Gavilanes</Divider>
+      <Divider>{userInfo.name}</Divider>
       <div className="info">
         <Row justify="space-around" align="middle">
           <Col>
@@ -25,13 +51,16 @@ export default function Profile() {
                 <b>Ciudad:</b> Guayaquil-Ecuador
               </p>
               <p>
-                <b>Edad:</b> 27 años
+                <b>Edad:</b> {userInfo.age} años
               </p>
               <p>
                 <b>Fecha de Cumpleaños:</b> 06-nov-1993
               </p>
               <p>
-                <b>Teléfono:</b> +593 0983549465
+                <b>Teléfono:</b> {userInfo.phoneNumber}
+              </p>
+              <p>
+                <b>uid:</b> {userInfo.uid}
               </p>
             </Card>
           </Col>
@@ -54,9 +83,10 @@ export default function Profile() {
           Mis Shows
         </Button>
       </div>
-      <div className="contentVariable">{
-          myshows ? (<MyShows  />) : (<CreateShow />)
-      }</div>
+      <div className="contentVariable">
+        {myshows ? <MyShows  /> : <CreateShow  />}
+      </div>
+      <div></div>
     </div>
   );
 }

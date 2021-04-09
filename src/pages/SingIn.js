@@ -22,9 +22,9 @@ export default function SingIn() {
         alert('Bienvenido a 2Show!');
       })
       .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
+        
         alert('Datos erroneos');
+        history.push('/singin');
       });
     
   }

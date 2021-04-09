@@ -2,7 +2,7 @@ import { Button, Modal, Divider } from "antd";
 import React, { useState } from "react";
 import "../assets/css/OnLiveShow.css";
 
-export default function OnLiveShow() {
+export default function OnLiveShow(props) {
   
   const [enterEvent, setEnterEvent] = useState(false);
 
@@ -44,7 +44,7 @@ export default function OnLiveShow() {
               <iframe
                 width="900px"
                 height="500px"
-                src="https://www.youtube.com/embed/j_ntWokRxME"
+                src={props.urlVideo}
                 title="YouTube video player"
                 frameborder="1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"

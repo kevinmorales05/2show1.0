@@ -201,11 +201,39 @@ bloque lo que 2show tiene para ti, y como funciona 2show
 }
 .contentVariable{
   height: fit-content;
-  background-color: pink;
+  background-color: rgba(108, 20, 27, 1) ;
   width: 70%;
   margin: 0 auto;
   margin-top:20px;
   padding-top: 20px;
   padding-bottom: 20px ;
   align-content: center;
+}
+
+
+/*Componente de Shows Adquiridos*/
+.showsList{
+  background-color: white;
+  align-items: flex-start;
+  text-align: start;
+  margin:20px;
+  
+}
+.shows{
+  margin: 10px;
+  
+  
+}
+
+/*Componente Shows*/
+.availableShows {
+  display: flex;
+  flex-direction:row;
+}
+
+@media (max-width: 600px) {
+  .availableShows {
+    display: flex;
+    flex-direction:column;
+  }
 }

@@ -1,11 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { Layout, Menu, Image } from "antd";
+import { Layout, Menu } from "antd";
 import {
   PlayCircleOutlined,
   UserOutlined,
   InfoCircleOutlined,
-  HomeOutlined,
+  HomeOutlined, ProfileOutlined
 } from "@ant-design/icons";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -47,6 +46,9 @@ function App() {
               <Menu.Item key="4" icon={<UserOutlined />}>
                 <Link to="/singin"> Sing in </Link>
               </Menu.Item>
+              <Menu.Item key="2" icon={<ProfileOutlined />}>
+                <Link to="/profile">Mi Perfil</Link>
+              </Menu.Item>
             </Menu>
           </Sider>
           <Layout>
@@ -79,7 +81,7 @@ function App() {
               </div>
             </Content>
             <Footer style={{ textAlign: "center" }}>
-              2Show ©2021 Created by iCode-Tech
+              2Show ©2021 Created by <a href="https://i-code.tech/" target="blank">iCode-Tech</a>
             </Footer>
           </Layout>
         </Layout>

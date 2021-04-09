@@ -43,7 +43,7 @@ const tailFormItemLayout = {
   },
 };
 
-export default function CreateShow(props) {
+export default function CreateShow() {
   const [form] = Form.useForm();
   if(auth.currentUser) {
       console.log('existe un usuario');
@@ -78,7 +78,7 @@ export default function CreateShow(props) {
       //dateEvent: values.dateEvent,
       dateCreation:  Date.now(),
       urlEvent: values.urlEvent,
-     //uid: user.uid,
+     // uid: uid,
     });
     console.log("upload complete!",  values.name);
   }
